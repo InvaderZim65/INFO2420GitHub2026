@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JavaScript and CSS</title>
+<script type="text/javascript">
+	function changecolor(code) {
+		var myHeading = document.getElementById('Top');
+		document.body.style.backgroundColor = code;
+
+		// Step 8: Logic for H1 styling based on background color
+		if (code == 'blue') {
+			myHeading.style.color = "white";
+			myHeading.style.textDecoration = "none";
+			myHeading.style.textAlign = "right";
+			myHeading.style.fontSize = "30px";
+		} else if (code == 'red') {
+			myHeading.style.color = "black";
+			myHeading.style.textDecoration = "none";
+			myHeading.style.textAlign = "center";
+			myHeading.style.fontSize = "44px";
+		} else if (code == 'yellow') {
+			myHeading.style.color = "red";
+			myHeading.style.textDecoration = "underline";
+			myHeading.style.textAlign = "center";
+			myHeading.style.fontSize = "24px";
+		} else {
+			// Default for 'white' or any other color
+			myHeading.style.color = "pink";
+			myHeading.style.textDecoration = "none";
+			myHeading.style.fontSize = "44px";
+			myHeading.style.textAlign = "left";
+		}
+	}
+</script>
+</head>
+
+<body>
+	<h1 id="Top">Change the background color of this page</h1>
+	<p>
+		<input type="button" value="Blue" onclick="changecolor('blue')" />
+		<input type="button" value="Red" onclick="changecolor('red')" />
+		<input type="button" value="Yellow" onclick="changecolor('yellow')" />
+		<input type="button" value="White" onclick="changecolor('white')" />
+	</p>
+</body>
+</html>

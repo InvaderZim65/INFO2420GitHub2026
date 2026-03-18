@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calculations</title>
+<script type="text/javascript">
+	var mins_per_hour = 60;
+	var hours_per_day = 24;
+	var days_per_year = 365.25;
+	var secs_per_min = 60;
+	var mins_per_year = mins_per_hour * hours_per_day * days_per_year;
+	var secs_per_year = mins_per_year * secs_per_min;
+
+	document.writeln("Seconds per year = " + secs_per_year);
+	document.writeln("<br />Minutes per year = " + mins_per_year);
+
+	// Step 4 & 5: Madlib implementation
+	var userName = prompt("Enter a Name:");
+	var pastVerb = prompt("Enter a Past-tense verb:");
+	var adjective = prompt("Enter a Descriptive adjective:");
+
+	var Madlib = userName + " " + pastVerb + " into the library with the " + adjective + " candlestick.";
+</script>
+</head>
+
+<body>
+	<h1>Javascript Calculations</h1>
+	<script type="text/javascript">
+		// Displaying the Madlib result in the body
+		document.writeln("<br><br><b>Madlib Result:</b><br>");
+		document.writeln(Madlib);
+	</script>
+</body>
+</html>

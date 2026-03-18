@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>JavaScript Practice 1- Slideshow</title>
+
+<style type="text/css">
+.flashclass{ /*sample CSS class added to image slideshow container*/
+	height: 200px;
+	width: 200px; /*a width should be defined for transition to work*/
+	border: 5px solid orange;
+	padding: 5px;
+}
+
+.flashclass img{
+	border-width: 0;
+}
+</style>
+
+<script type="text/javascript" src="transitionshow.js"></script>
+
+</head>
+
+<body>
+<h1>My Automated Slideshow</h1>
+
+<script type="text/javascript">
+// Step 14: Modify the imagearray to show the 4 thumbnail images
+var flashyshow = new flashyslideshow({ 
+	wrapperid: "myslideshow", 
+	wrapperclass: "flashclass", 
+	imagearray: [
+		["Images/Thumbnails/CoupleSailingSm.jpg", "", "", "Sailing"],
+		["Images/Thumbnails/PigSm.jpg", "", "", "Boy and his Pig"],
+		["Images/Thumbnails/SaladSm.jpg", "", "", "Yummy Salad"],
+		["Images/Thumbnails/StorkSm.jpg", "", "", "Stork at Sunset"]
+	],
+	pause: 2000, 
+	transduration: 1000 
+})
+</script>
+		
+</body>
+</html>

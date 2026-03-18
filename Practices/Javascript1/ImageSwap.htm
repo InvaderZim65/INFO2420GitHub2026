@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Image Swap</title>
+<script type="text/javascript">
+	// Step 12: Added Hamster to the arrays
+	var imgArray = new Array(
+		'CoupleSailingLg.jpg',
+		'PigLg.jpg',
+		'SaladLg.jpg',
+		'StorkLg.jpg',
+		'HamsterLg.jpg'
+	);
+
+	var titleArray = new Array(
+		'Newlyweds Sailing',
+		'Boy and His Pig',
+		'Yummy Salad',
+		'Stork at Sunset',
+		'Hamster on a Head'
+	);
+
+	function swapImage(imgIndex) {
+		document.getElementById('mainImg').src = "Images/Large/" + imgArray[imgIndex];
+		document.getElementById('ImgTitle').innerHTML = titleArray[imgIndex];
+	}
+</script>
+<style type="text/css">
+	#thumbs img { width: 100px; cursor: pointer; margin: 5px; }
+	#mainImg { width: 400px; display: block; margin-top: 20px; }
+</style>
+</head>
+
+<body>
+	<h1 id="ImgTitle">Newlyweds Sailing</h1>
+	<div id="thumbs">
+		<img src="Images/Thumbnails/CoupleSailingSm.jpg" alt="Sailing" onmouseover="swapImage(0);" />
+		<img src="Images/Thumbnails/PigSm.jpg" alt="Pig" onmouseover="swapImage(1);" />
+		<img src="Images/Thumbnails/SaladSm.jpg" alt="Salad" onmouseover="swapImage(2);" />
+		<img src="Images/Thumbnails/StorkSm.jpg" alt="Stork" onmouseover="swapImage(3);" />
+		<img src="Images/Thumbnails/HamsterSm.jpg" alt="Hamster" onmouseover="swapImage(4);" />
+	</div>
+	<img id="mainImg" src="Images/Large/CoupleSailingLg.jpg" alt="Main Display" />
+</body>
+</html>
