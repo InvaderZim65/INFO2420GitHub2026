@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extreme Honeymoons - Graphics</title>
+
+<style type="text/css">
+	body {
+		/* Sets your image as the background */
+		background-image: url('Images/2colback.jpg');
+		
+		/* Stretches the image to cover 100% of the screen's width, keeping it 150px tall */
+		background-size: 100% 150px;
+		
+		/* Repeats that stretched image downwards vertically */
+		background-repeat: repeat-y; 
+		
+		margin: 0;
+	}
+
+	/* Removed the background and border so the images sit directly on your background */
+	#thumbs, #image {
+		width: 700px; 
+		text-align: center; 
+		margin: 0 auto 0 auto; 
+		color: #000; 
+		padding: 5px;
+	}
+
+	#thumbs {
+		margin-top: 10px;
+	}
+			
+	#thumbs img {
+		border: solid 2px #ccc; 
+		margin: 5px;
+	}
+
+	#image{
+		height: 400px;
+	}
+
+	.instructions{
+		font-style: italic;
+	}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+		var imgArray = new Array(
+			'CoupleBike3Lg.jpg',
+			'OwnerMotorCycleLg.jpg',
+			'OwnersHikingLg.jpg',
+			'SkiCoupleLg.jpg'
+		);
+
+		var titleArray = new Array(
+			'Mountain Biking at Sunset',
+			'Motorcycle Touring',
+			'Sunset Relaxing',
+			'Skiing Together'
+		);
+			
+		var imgPath = "Images/fullsize/";
+		
+		function swapImage(imgID) {
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle = titleArray[imgID];
+      		textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+</script>
+
+</head>
+<body onload="preloadImages()"> 
+
+<div align="center">
+
+	<br />
+
+	<div>
+		<a href="#" onmouseover="document.getElementById('print').src='Images/print2.jpg';" onmouseout="document.getElementById('print').src='Images/print1.jpg';">
+		<img src="Images/print1.jpg" alt="Print Page" width="200" height="50" id="print" style="border:none;"></a>
+	</div>
+
+	<br />
+
+	<div>
+		<a href="#" onmouseover="document.getElementById('logo').src='Images/Logo2.jpg';" onmouseout="document.getElementById('logo').src='Images/Logo.jpg';">
+		<img src="Images/Logo.jpg" alt="Extreme Honeymoons Logo" id="logo" style="border:none;"></a>
+	</div>
+
+	<br />
+
+	<div id="thumbs">
+		<img src="Images/thumbnails/CoupleBike3Lg.png" alt="Mountain Biking" onmouseover="swapImage(0);" />
+		<img src="Images/thumbnails/OwnerMotorCycleLg.png" alt="Motorcycle Touring" onmouseover="swapImage(1);" />
+		<img src="Images/thumbnails/OwnersHikingLg.png" alt="Sunset Relaxing" onmouseover="swapImage(2);" />
+		<img src="Images/thumbnails/SkiCoupleLg.png" alt="Skiing Together" onmouseover="swapImage(3);" />
+	</div>
+
+	<div id="image">
+		<img id="theImage" src="Images/fullsize/SkiCoupleLg.jpg" alt="Skiing Together" />
+		<h3 id="bottomText">Skiing Together</h3>
+	</div>
+
+	<br /><br />
+
+</div>
+
+</body>
+</html>
