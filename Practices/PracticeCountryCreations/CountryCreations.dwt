@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Country Creations</title>
+<!-- TemplateEndEditable -->
+<link href="mystyles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<img alt="logo" class="logoleft" src="Images/cclogo.gif"><img alt="banner" src="Images/ccbanner.png">
+	</header>
+
+	<section>
+		<nav>
+			<a href="index.html">&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<br>
+			<a href="AboutUs.html">&nbsp;About Us&nbsp;</a>
+			<br>
+			<a href="Tributes.html">&nbsp;Tributes&nbsp;&nbsp;&nbsp;</a>
+		</nav>
+	
+		<!-- TemplateBeginEditable name="PageContent" -->
+		<article>
+			<!-- Default content for new pages goes here – it will be replaced on each child page -->
+		</article>
+		<!-- TemplateEndEditable -->
+	</section>
+
+	<footer>
+		<img alt="heart" src="Images/heartline.gif">
+	</footer>
+</body>
+</html>
