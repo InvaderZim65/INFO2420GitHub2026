@@ -1,0 +1,228 @@
+/* Base Body Styling */
+body {
+    background-color: #f4f0eb;
+    font-family: Georgia, serif;
+    font-size: 1.1em;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+header, section, footer {
+    width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header FIXED */
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Grouped logo + banner */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img#logoImg {
+    height: 100px;
+}
+
+header img.banner {
+    height: 100px;
+}
+
+/* Navigation FIXED */
+nav {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+nav a {
+    display: block;
+    background-color: #2a9d8d;
+    color: white !important;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 4px;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+nav a:hover {
+    background-color: #e76f51;
+}
+
+/* Section */
+section {
+    background-image: url('Images/2colback.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% 150px;
+    padding: 20px 0;
+    min-height: 800px;
+}
+
+/* Article */
+article {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #e76f51;
+}
+
+/* Typography */
+h1 {
+    background-color: #e76f51;
+    color: white;
+    font-size: 2.6em;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0 0 35px 0;
+}
+
+h2 {
+    color: #2a9d8d;
+    font-size: 2.2em;
+    border-bottom: 3px solid #2a9d8d;
+    padding-bottom: 12px;
+}
+
+h3 {
+    color: #e76f51;
+}
+
+p {
+    text-align: left;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+/* Links */
+a:link { color: #2a9d8d; text-decoration: none; }
+a:visited { color: #1e6b5f; }
+a:hover { color: #e76f51; text-decoration: underline; }
+
+/* Images */
+#thumbs, #image {
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#thumbs img {
+    border: solid 2px #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#image {
+    height: 400px;
+}
+
+/* Mini Tribute */
+.mini-tribute {
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.mini-tribute img {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+    border: 3px solid #e76f51;
+}
+
+/* Footer */
+footer {
+    background-color: #2a9d8d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #f4f0eb;
+}
+
+/* Splash Page Styles */
+.splash-container {
+    text-align: center;
+    margin-top: 50px;
+    background-image: none; /* Removes the 2colback.jpg for the splash page */
+}
+
+/* --- Styles moved from AboutUs and Tributes --- */
+
+@font-face {
+    font-family: 'Bummer';
+    src: url('Fonts/Bummer.ttf') format('truetype');
+}
+
+.left {
+    float: left;
+    margin: 15px 30px 25px 0;
+    padding: 8px;
+    border: 5px solid #e76f51;
+    background-color: #fff;
+}
+
+.right {
+    float: right;
+    margin: 15px 0 25px 30px;
+    padding: 8px;
+    border: 5px solid #e76f51;
+    background-color: #fff;
+}
+
+hr { 
+    border: none; 
+    border-top: 1px solid #ccc; 
+    margin: 40px 0; 
+}
+
+table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+caption {
+    font-family: 'Bummer', sans-serif;
+    background-color: #e76f51;
+    color: white;
+    font-size: 1.8em;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+th {
+    background-color: #2a9d8d;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+td {
+    background-color: #ffffff;
+    border: 2px solid #e76f51;
+    color: #3d2b1f;
+    padding: 10px;
+    font-size: 1.1em;
+}
